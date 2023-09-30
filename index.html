@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <title>JS Editor</title>
+  </head>
+  <body>
+    <div class="editor">
+      <div class="editor__toolbar">
+        <label for="file">
+          <input class="file" type="file" id="file" />
+        </label>
+        <div class="tool__items">
+          <label class="tool__item">
+            brightness
+            <input class="brightness" type="range" min="0" max="200" />
+          </label>
+
+          <label class="tool__item">
+            saturation
+            <input class="saturation" type="range" min="0" max="200" />
+          </label>
+
+          <label class="tool__item">
+            blure
+            <input class="blure" type="range" min="0" max="25" />
+          </label>
+
+          <label class="tool__item">
+            inversion
+            <input class="inversion" type="range" min="0" max="200" />
+          </label>
+
+          <label class="tool__item">
+            color
+            <input class="colorPicker" type="color" />
+          </label>
+
+          <label class="tool__item">
+            background color
+            <input class="bg__colorPicker" type="color" />
+          </label>
+
+          <label class="tool__item">
+            size
+            <input class="pen__size" type="range" min="1" max="10" />
+          </label>
+
+          <div class="zoom">
+            <div class="zoom__img">
+              <img src="./assets/zoom.jpg" alt="zoom" />
+            </div>
+            <div class="unzoom__img">
+              <img src="./assets/unzoom.png" alt="unzoom" />
+            </div>
+          </div>
+        </div>
+        <div class="reset__changes">
+          <button id="reset">Reset</button>
+        </div>
+      </div>
+
+      <div class="editor__workspace">
+        <canvas id="canvas"></canvas>
+      </div>
+    </div>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
